@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib@LIB_SUFFIX@
+includedir=${prefix}/include/grcompat
+
+Name: gruel
+Description: The GNU Radio Utility Etcetera Library
+Requires:
+Version: @LIBVER@
+Libs: -L${libdir} -lgruel
+Cflags: -I${includedir}

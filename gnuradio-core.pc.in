@@ -1,0 +1,12 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib@LIB_SUFFIX@
+includedir=${prefix}/include/grcompat
+
+Name: gnuradio-core
+Description: GNU Software Radio toolkit
+Requires: gruel
+Version: @LIBVER@
+Libs.private:
+Libs: -L${libdir} -lgnuradio-runtime
+Cflags: -I${includedir}

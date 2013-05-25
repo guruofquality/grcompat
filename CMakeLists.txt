@@ -69,3 +69,58 @@ install(FILES
     python/gruel/__init__.py
     DESTINATION ${GR_PYTHON_DIR}/gruel
 )
+
+########################################################################
+# Bullshit gruel library
+########################################################################
+add_library(gruel SHARED foobarz.cpp)
+
+install(TARGETS gruel
+    LIBRARY DESTINATION lib${LIB_SUFFIX} # .so file
+    ARCHIVE DESTINATION lib${LIB_SUFFIX} # .lib file
+    RUNTIME DESTINATION bin              # .dll file
+)
+
+########################################################################
+# gnuradio core symlink
+########################################################################
+#custom command to generate symlinks
+add_custom_command(
+    TARGET gruel
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E create_symlink libgnuradio-runtime.so ${CMAKE_CURRENT_BINARY_DIR}/libgnuradio-core.so
+    #COMMAND ${CMAKE_COMMAND} -E touch libgnuradio-runtime.so #so the symlinks point to something valid so cmake 2.6 will install
+)
+
+#and install the extra symlinks
+install(
+    FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/libgnuradio-core.so
+    DESTINATION lib${LIB_SUFFIX}
+)
+
+########################################################################
+# Create Pkg Config File - gruel
+########################################################################
+configure_file(
+    ${CMAKE_CURRENT_SOURCE_DIR}/gruel.pc.in
+    ${CMAKE_CURRENT_BINARY_DIR}/gruel.pc
+@ONLY)
+
+install(
+    FILES ${CMAKE_CURRENT_BINARY_DIR}/gruel.pc
+    DESTINATION lib${LIB_SUFFIX}/pkgconfig
+)
+
+########################################################################
+# Create Pkg Config File - core
+########################################################################
+configure_file(
+    ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-core.pc.in
+    ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-core.pc
+@ONLY)
+
+install(
+    FILES ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-core.pc
+    DESTINATION lib${LIB_SUFFIX}/pkgconfig
+)
