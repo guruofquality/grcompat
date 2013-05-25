@@ -6,6 +6,7 @@
 #include <gnuradio/io_signature.h>
 
 typedef gr::io_signature gr_io_signature;
+typedef gr::io_signature::sptr gr_io_signature_sptr;
 
 static inline gr_io_signature::sptr gr_make_io_signature(int min_streams, int max_streams,
                      int sizeof_stream_item)

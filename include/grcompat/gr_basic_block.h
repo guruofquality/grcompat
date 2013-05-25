@@ -7,6 +7,7 @@
 #include <gr_msg_queue.h>
 #include <gr_message.h>
 #include <gr_tags.h>
+#include <gr_io_signature.h>
 #include <gnuradio/basic_block.h>
 
 typedef gr::basic_block gr_basic_block;
