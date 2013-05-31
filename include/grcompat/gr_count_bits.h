@@ -36,3 +36,6 @@ static inline unsigned int gr_count_bits64(unsigned long long int x)
 }
 
 #endif //GNURADIO_GR_COUNT_BITS_H
+
+#WARNING GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+
