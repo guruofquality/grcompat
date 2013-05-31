@@ -21,3 +21,6 @@ static inline gr_message_sptr gr_make_message_from_string(const std::string s, l
                                  }
 
 #endif //GNURADIO_GR_MESSAGE_H
+
+#warning GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+
