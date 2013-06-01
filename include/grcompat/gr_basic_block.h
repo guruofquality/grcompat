@@ -14,3 +14,6 @@ typedef gr::basic_block gr_basic_block;
 typedef boost::shared_ptr<gr::basic_block> gr_basic_block_sptr;
 
 #endif //GNURADIO_GR_BASIC_BLOCK_H
+
+#warning GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+

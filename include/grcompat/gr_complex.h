@@ -1,0 +1,11 @@
+// wat
+
+#ifndef GNURADIO_GR_COMPLEX_H
+#define GNURADIO_GR_COMPLEX_H
+
+#include <gnuradio/gr_complex.h>
+
+#endif //GNURADIO_GR_COMPLEX_H
+
+#warning GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+

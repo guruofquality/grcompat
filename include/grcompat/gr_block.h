@@ -9,3 +9,6 @@
 typedef gr::block gr_block;
 
 #endif //GNURADIO_GR_BLOCK_H
+
+#warning GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+

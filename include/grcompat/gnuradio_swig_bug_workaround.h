@@ -42,3 +42,6 @@ class sync_interpolator;
 class top_block;
 
 #endif /* INCLUDED_GNURADIO_SWIG_BUG_WORKAROUND_H */
+
+#warning GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+

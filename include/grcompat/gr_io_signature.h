@@ -36,3 +36,6 @@ static inline gr_io_signature::sptr gr_make_io_signaturev(int min_streams, int m
                       }
 
 #endif //GNURADIO_GR_IO_SIGNATURE_H
+
+#warning GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+

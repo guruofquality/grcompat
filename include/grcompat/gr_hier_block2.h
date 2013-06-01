@@ -9,3 +9,6 @@
 typedef gr::hier_block2 gr_hier_block2;
 
 #endif //GNURADIO_GR_HIER_BLOCK2_H
+
+#warning GR-COMPAT REQUIRED TO COMPILE - OUTDATED GNURADIO API IN USE - PLEASE UPDATE YOUR MODULE!!!
+
